@@ -35,12 +35,14 @@ export class ScheduleDemo implements OnInit {
    eventRender: (event: MyEvent, element) => void ;
    defaultView: string;
    timeFormat: string;
+   locale: string;
    log = Log.create('ScheduleDemo');
 
     constructor(private eventService: EventService) {
         this.log.data('constructor');
         this.defaultView = 'agendaWeek';
         this.timeFormat = 'HH:mm';
+        this.locale = 'fr';
     }
 
     ngOnInit() {
